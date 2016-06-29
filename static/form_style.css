@@ -2,6 +2,11 @@ html,body{
 	margin:0px;
 	padding:0px;
 }
+body{
+	background-image: url("https://images7.alphacoders.com/404/404658.jpg");
+        background-color: white;
+	background-size: cover;
+}
 h3 {
 	text-align: center;
 	font-family: georgia;
