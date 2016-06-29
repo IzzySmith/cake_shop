@@ -2,10 +2,12 @@
 
 #### Pages
 
-- the index 
-- landing page
-- form
-- thankyou for ordering page -> then, at the end of sessionpopup with form inside 
+- the index (link to Surfly session) fake links to themed cakes and designs (wedding/ birthday/ anniversary/ english high tea, an order button (to the form), ask for assistance (surfly)) 
+  - zoopim will be added here
+- landing page (start session) -> it is a popup with session id and text
+- form (during session) payment details
+- thankyou for ordering page 
+- -> then, at the end of sessionpopup with survey inside 
 - reciept
 
 #### Characters:
