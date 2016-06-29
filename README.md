@@ -1,5 +1,12 @@
 # cake shop
 
+#### Pages
+
+- the index 
+- landing page
+- form
+- thankyou for ordering page -> then, at the end of sessionpopup with form inside 
+- reciept
 
 #### Characters:
 
@@ -8,13 +15,18 @@
 
 #### Shop Name and theme
 
-*we bake fantasy into reality*
-*baking dreams come true*
-parady the disney logo in cake?! (castle as a cake)
+Name: 
+
+
+Slogan: *baking dreams come true*
+
+parody the disney logo in cake?! (castle as a cake)
 
 Initially the developers are setting up the index page for their cake shop. They are a specialist cake shop and make the cake for the customer -> they make the fantasy cakes of their customers come true. Comunication is very important, and so they want co-browsing funcionality to show the different options, guide, and to offer greater support to clients. They decide to integrate Surfly: 
 
 *add inbound/ outbound information?*
+
+#### The story flow 
 
 First step:
  - create an index page (shop front) without Surfly functionality **first commit**
