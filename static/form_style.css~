@@ -14,7 +14,7 @@ h3 {
 
 
 .dark-matter {
-	margin-left: auto;
+	margin-left: 600px;
 	margin-right: auto;
 	max-width: 500px;
 	background: #555;
