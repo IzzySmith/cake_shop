@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link href="form_style.css" rel="stylesheet" type="text/css" />
     <title>Cake order</title>
 
   </head>
@@ -11,36 +12,34 @@
    <h1>Order Form</h1>
    </div>
 
-    <form>
-      <div class="page-header">
-         <h2>Cake Order Form</h2>
-      </div>
-      <table class="center_form">
-        <tr>
-          <td>
-             <h4>Full Name</h4>
-              <p><input type = "text" name = "Login"></p>
-           </td>
-         </tr>
-          <tr>
-            <td>
-              <h4>Address</h4>
-                <p><input type = "text" name = "Login"></p>
-             </td>
-           </tr>
-           <tr>
-              <td>
-                <h4>Payment details</h4>
-                  <p><input type = "text" name = "Login"></p>
-               </td>
-             </tr>
-             <tr>
-                <td>
-                   <button type="button" id="log_button">Order</button>
-                </td>
-             </tr> 
-          </table>
-       </div>
-    </form>
+	 <form action="" method="post" class="dark-matter">
+	    <h1>Order Form 
+		<span>Please fill all the text fields</span>
+	    </h1>
+	    <label>
+		<span>Full name :</span>
+		<input id="name" type="text" name="name" placeholder="Your Full Name" />
+	    </label>
+	    
+	    <label>
+		<span>Email address :</span>
+		<input id="email" type="email" name="email" placeholder="Valid Email Address" />
+	    </label>
+	    
+	    <label>
+		<span>Address:</span>
+		<textarea id="message" name="message" placeholder="Your Message to Us"></textarea>
+	    </label> 
+	     <label>
+		<span>Payment details :</span><select name="selection">
+		<option value="Job Inquiry">Job Inquiry</option>
+		<option value="General Question">General Question</option>
+		</select>
+	    </label>    
+	     <label>
+		<span>&nbsp;</span> 
+		<input type="button" class="button" value="Send" /> 
+	    </label>    
+	</form>
   </body>
 </html>
