@@ -15,7 +15,7 @@ h3 {
 
 .dark-matter {
 	max-width: 500px;
-	background: green;
+	background: #555;
 	padding: 20px 30px 20px 30px;
 	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #D3D3D3;
@@ -83,7 +83,7 @@ h3 {
 	width: 70%;
 }
 .dark-matter .button {
-	background-color: #87cefa;
+	background-color: orange;
 	border: none;
 	padding: 10px 25px 10px 25px;
 	color: #585858;

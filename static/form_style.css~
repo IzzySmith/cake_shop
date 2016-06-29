@@ -14,8 +14,6 @@ h3 {
 
 
 .dark-matter {
-	margin-left: 600px;
-	margin-right: auto;
 	max-width: 500px;
 	background: #555;
 	padding: 20px 30px 20px 30px;
@@ -85,7 +83,7 @@ h3 {
 	width: 70%;
 }
 .dark-matter .button {
-	background-color: #87cefa;
+	background-color: orange;
 	border: none;
 	padding: 10px 25px 10px 25px;
 	color: #585858;
