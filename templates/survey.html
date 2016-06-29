@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form_style.css') }}">
+    <title>Survey</title>
+  <style>
+  body{
+	background-image: url("http://7-themes.com/data_images/out/52/6946953-cupcakes-icing-sugar-baking.jpg");
+        background-color: white;
+	background-size: cover;
+  }
+
+  h1{
+	font-size: 32px;
+	color: #87cefa;
+	font-weight: bold;
+	font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  form{
+	margin-top: 80px;
+  }
+
+  </style>
+  </head>
+
+  <body>
+
+	 <form action="" method="post" class="dark-matter">
+	    <h1>Survey
+		<span>Please give us feedback</span>
+	    </h1>
+	    <label>
+		<span>Full name :</span>
+		<input id="name" type="text" name="name" placeholder="Your Full Name" />
+	    </label>
+	    
+	    <label>
+		<span>Email address :</span>
+		<input id="email" type="email" name="email" placeholder="Valid Email Address" />
+	    </label>
+	    
+	    <label>
+		<span>Address:</span>
+		<textarea id="message" name="message" placeholder="Your Message"></textarea>
+	    </label>   
+	     <label>
+		<span>&nbsp;</span> 
+		<input type="button" class="button" value="Send" /> 
+	    </label>    
+	</form>
+  </body>
+</html>
