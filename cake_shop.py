@@ -13,7 +13,7 @@ def landing_page():
 def order_form():
    return render_template('order_form.html')
 
-@app.route('/survet')
+@app.route('/survey')
 def survey():
    return render_template('survey.html')
 
