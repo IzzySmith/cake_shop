@@ -9,6 +9,7 @@
 - thankyou for ordering page 
 - -> then, at the end of sessionpopup with survey inside 
 - reciept
+- login page?
 
 #### Characters:
 
