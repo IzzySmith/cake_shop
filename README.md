@@ -18,6 +18,9 @@
 
 #### Shop Name and theme
 
+Colours: 
+  - light blue 
+
 Name: 
 
 
