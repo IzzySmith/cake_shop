@@ -1,3 +1,18 @@
+html,body{
+	margin:0px;
+	padding:0px;
+}
+h3 {
+	text-align: center;
+	font-family: georgia;
+	color: #727272;
+	border-bottom: 1px solid #EEE;
+	padding: 5px;
+	font-size: x-large;
+	margin-top: 50px;
+}
+
+
 .dark-matter {
 	margin-left: auto;
 	margin-right: auto;
