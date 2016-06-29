@@ -1,16 +1,7 @@
-html{
+html,body{
 	margin:0px;
 	padding:0px;
 }
-
-body{
-	margin:0px;
-	padding:0px;
-	background-image: url("https://images7.alphacoders.com/404/404658.jpg");
-        background-color: white;
-	background-size: cover;
-}
-
 h3 {
 	text-align: center;
 	font-family: georgia;
@@ -58,7 +49,7 @@ h3 {
     margin-top: 10px;
     font-weight: bold;
 }
-.dark-matter input[type="text"], .dark-matter input[type="email"], .dark-matter textarea, .dark-matter select {
+.dark-matter input[type="text"], .dark-matter input[type="email"], .dark-matter input[type="text"], .dark-matter select {
 	border: none;
 	color: #525252;
 	height: 25px;
@@ -94,7 +85,7 @@ h3 {
 	width: 70%;
 }
 .dark-matter .button {
-	background: #87cefa;
+	background-color: #87cefa;
 	border: none;
 	padding: 10px 25px 10px 25px;
 	color: #585858;
