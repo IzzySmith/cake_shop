@@ -13,6 +13,7 @@
 	    text-align: justify;
 	    margin-top: 200px;
 	    margin-left: 50px;
+	    font-family: 'Helvetica Neue', sans-serif;
 	}
 
 	.button {
@@ -31,17 +32,9 @@
             font-weight: bold;
 	    margin-top: 100px;
 	    margin-left: 50px;
-	    border-radius: 8px;
+	    border-radius: 12px;
 	}
- 	/*
-	p {
-	  margin-top: 200px;
-	  text-align: left;
-	  color: white;
-	  font-weight: bold;
-	  font-size: large;
-	}
-	*/
+
 	body {
    	 background-image: url("https://images7.alphacoders.com/404/404658.jpg");
          background-color: white;
