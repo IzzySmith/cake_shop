@@ -3,6 +3,20 @@
   <head>
     <title>Landing Page</title>
 
+    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
+	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
+ 	drawing_mode: "permanent", // change drawing mode so that the drawings last
+	chat_box_color: "#87cefa", // change color of chat box so that it suits our website's theme
+	theme_font_background: "#87cefa", // change color of button 
+	videochat: false, // remove videochat feature (not needed)
+	hidden: true, // hide the default button (not needed now that we have our own custom button),
+	block_until_agent_joins: false, // remove red banner
+	auto_start: true, // session will start automatically
+	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey"
+	};
+	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
+    </script>
+
     <!--Style-->
     <style>
 	p.test {
@@ -11,7 +25,7 @@
 	    color: #87cefa;
 	    font-weight: bold;
 	    text-align: justify;
-	    margin-top: 200px;
+	    margin-top: 160px;
 	    margin-left: 50px;
 	    font-family: 'Helvetica Neue', sans-serif;
 	}
@@ -45,10 +59,40 @@
   </head>
 
   <body>
-        <button class="button" id="id_button">Session ID</button>
+        <button class="button" id="id_button" onclick="redirect()">Session ID</button>
 	<div>
-   	<p class="test">You requested some help. If you are already on the phone with our company, you can pass on the session id you see on the page to the person you are talking to. They will then be able to join you on this session and guide you through the website. Once you have given this id, you can close this page. </p>
-	<p class="test">If you just want to get some help, you can close this window and wait for an agent to join the session and help you.</p>
+   	<p class="test">You requested some help. If you are already on the phone with our company, you can pass on the session id you see on this page to the person you are talking to. They will then be able to join you on this session and guide you through the website. Once you have given this id, you can click on it to be redirected to the home page. </p>
+	<p class="test">If you just want to get some help, you can click the button and wait for an agent to join the session and help you.</p>
   	</div>
+	
+
+	<script>
+	function redirect(){
+		window.location.href = '/';
+	}		
+	</script>
+
+	<script type="text/javascript">
+ 	// using the REST API to get information about the session
+	var request = new XMLHttpRequest();
+
+	request.open('GET', 'https://api.surfly.com/v2/sessions/?api_key=33c092b9d4d6425e817f5140447e43da&active_session=true');
+
+	request.onreadystatechange = function () {
+	  if (this.readyState === 4) {
+	    if(window.__surfly){
+		    var body = this.responseText; 
+		    // we extract the queue_id from the string we get from the request
+		    var index = body.indexOf("queue_id");
+		    var id = body.substring(index+10, body.length-2);
+		    // we display this id on the button
+		    document.getElementById("id_button").innerHTML=id;
+	    }
+	  }
+	};
+
+	request.send();
+	</script>
+
    </body>
 </html>
