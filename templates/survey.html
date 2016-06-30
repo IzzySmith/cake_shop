@@ -29,7 +29,7 @@
 
   <body>
 
-	 <form action="" method="post" class="dark-matter">
+	 <form action="" method="post" class="dark-matter" id="survey">
 	    <h1>Survey
 		<span>Please give us feedback</span>
 	    </h1>
@@ -49,8 +49,20 @@
 	    </label>   
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" style="background-color: #87cefa;" class="button" value="Send" /> 
+		<input type="button" style="background-color: #87cefa;" class="button" onclick="saveForm()" value="Send" /> 
 	    </label>    
 	</form>
+	
+	<script type="text/javascript">
+       function saveForm() {
+          document.getElementById("survey").submit();
+       }
+       var get_name = document.getElementById("survey");
+       // we get the form and save it as a variable
+       // this variable is then saved as a cookie
+       document.cookie = 'survey:survey';
+       console.log(document.cookie);
+      </script>
+
   </body>
 </html>
