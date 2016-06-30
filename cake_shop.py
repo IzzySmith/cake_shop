@@ -18,5 +18,11 @@ def survey():
    return render_template('survey.html')
 
 
+@app.route('/receipt')
+def receipt():
+   return render_template('receipt.html')
 
+@app.route('/thank_you')
+def thank_you():
+   return render_template('thank_you.html')
 
