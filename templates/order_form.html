@@ -54,8 +54,12 @@
 	    </label>    
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" class="button" style="background-color: #87cefa;" value="Order" /> 
+		<input type="button" class="button" onclick=thankYou() style="background-color: #87cefa;" value="Order" /> 
 	    </label>    
 	</form>
+        <script type="text/javascript">
+           function thankYou() {
+              window.location.assign("{{ url_for('thank_you') }}");
+           }
   </body>
 </html>
