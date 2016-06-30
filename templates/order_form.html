@@ -72,7 +72,7 @@
 
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" class="button" onclick=thankYou() style="background-color: #87cefa;" value="Order" /> 
+		<input type="button" class="button" id="order_button" onclick=thankYou() style="background-color: #87cefa;" value="Order" /> 
 	    </label>    
 	</form>
         <script type="text/javascript">
@@ -80,5 +80,18 @@
               window.location.href = '/thank_you';
            }
         </script>
+
+	<script type="text/javascript">
+	// when the leader is in control then the 'buy' button is clickable otherwise, it is disabled
+	window.addEventListener('surflycontrolchange', function (event) {
+	    var element = document.getElementById("order_button");
+	    if (event.leaderHasControl) {
+		element.disabled = false;
+	    } else {
+		element.disabled = true;
+	    }
+	});
+	</script>
+
   </body>
 </html>
