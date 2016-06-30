@@ -31,7 +31,7 @@
 
 <body>
 
-    <div class="brand">Cake Shop</div>
+    <div class="brand">Fantasy Bakes</div>
     <div class="address-bar">123 A Street | Some City, XY 12345 | 890.567.1234</div>
 
     <!-- Navigation -->
@@ -50,7 +50,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="receipt.html">Receipt</a>
+                        <a href="{{ url_for('receipt') }}">Receipt</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('index') }}">Home</a>
                     </li>
                 </ul>
             </div>
@@ -79,6 +82,8 @@
 
     </div>
 
+    
+
     <!-- jQuery -->
     <script src="../static/jquery.js"></script>
 
@@ -91,6 +96,7 @@
         interval: 5000 //changes the speed
     })
     </script>
+
 
 </body>
 
