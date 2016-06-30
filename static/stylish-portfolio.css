@@ -20,6 +20,7 @@ body {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    color: #79b9e1;
 }
 
 .text-vertical-center h1 {
@@ -27,6 +28,7 @@ body {
     padding: 0;
     font-size: 4.5em;
     font-weight: 700;
+    color: #87cefa;
 }
 
 /* Custom Button Styles */
@@ -34,14 +36,14 @@ body {
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #87cefa;;
 }
 
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: #79b9e1;
 }
 
 .btn-light {
@@ -162,6 +164,11 @@ hr.small {
     -o-background-size: cover;
 }
 
+.img-logo {
+    float: none;
+    left: 0px;
+    position: absolute;
+}
 
 /* Portfolio */
 
