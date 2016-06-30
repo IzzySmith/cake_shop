@@ -34,7 +34,7 @@
 	    text-align: center;
 	    text-decoration: none;
 	    display: inline-block;
-	    font-size: 42px;
+	    font-size: 30px;
 	    margin: 0 auto;
 	    cursor: pointer;
             width: 30%;
@@ -50,7 +50,8 @@
  	drawing_mode: "permanent", // change drawing mode so that the drawings last
 	chat_box_color: "#87cefa", // change color of chat box so that it suits our website's theme
 	theme_font_background: "#87cefa", // change color of button 
-	videochat: false // remove videochat feature (not needed)
+	videochat: false, // remove videochat feature (not needed)
+	hidden: true // hide the default button (not needed now that we have our own custom button)
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
@@ -167,10 +168,12 @@
                         <strong>help</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-center" src="../static/logo1.png" alt="">
+                    
                     <hr class="visible-xs">
                      <p> Want us to help you design the cake of your dreams? Come chat with us :)</p>
-                     <a href="#surflystart"> <button class="button" id="id_button">Get Help!</button></a>
+		     <div style="text-align:center;">
+                     	<a href="#surflystart"> <button class="button" id="id_button"><img src="../static/logo1.png" alt=""></button></a>
+		     </div>
                 </div>
             </div>
         </div>
