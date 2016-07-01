@@ -29,9 +29,7 @@
 
     <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
 widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-/*
-add your custom options here
-*/
+hidden: true,
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
@@ -84,8 +82,16 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
 		     <script>
-		     console.log(document.cookie);
-		     document.write(document.cookie);
+		     function getCookieOrder(){
+			var name = "order:";
+			var cookies = document.cookie.split(';');
+			for(var i =0; i<cookies.length;i++){
+				if(cookies[i].indexOf(name)){
+					var index = cookies[i].indexOf(name);
+			     		document.write(cookies[i].substring(index+6, cookies[i].length));
+				}
+			}
+		     }
 		     </script>
                      <p> Retrieve the payment information and display it here</p>
                 </div>

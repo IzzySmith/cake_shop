@@ -6,9 +6,7 @@
     <title>Cake order</title> 
     <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
 widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-/*
-add your custom options here
-*/
+hidden: true,
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
@@ -92,9 +90,9 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
            function thankYou() {
 	      document.getElementById("order").submit();
 	      var get_name = document.getElementById("name").value;
-	      console.log(document.getElementById("name"));
-	      console.log(get_name);
-              document.cookie = 'order: name='+get_name+';';
+	      var get_email = document.getElementById("email").value;
+	      var get_address = document.getElementById("address").value;
+              document.cookie = 'order: name='+get_name+'; email='+get_email+'; address='+get_address+';';
 	      console.log(document.cookie);
               window.location.href = '/thank_you';
            }
