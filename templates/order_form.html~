@@ -3,15 +3,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form_style.css') }}">
-    <title>Cake order</title>
-
-  <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
-	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
-	};
-	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
-    </script>
-
+    <title>Cake order</title> 
+    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
+widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
+/*
+add your custom options here
+*/
+};
+var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
   <style>
   body{
 	background-image: url("http://static0.thethingsimages.com/wp-content/uploads/2016/02/baking-tips-darkened.jpg");
@@ -30,13 +29,18 @@
 	margin-top: 60px;
 	margin-left: 900px;
   }
-
+ 
+  .img-logo {
+    float: none;
+    left: 0px;
+    position: absolute;
+  }
   </style>
   </head>
 
   <body>
-
-	 <form action="" method="post" class="dark-matter">
+         <img class="img-logo" src="../static/logo1.png"/>
+	 <form action="" method="post" id="order" class="dark-matter">
 	    <h1>Fantasy Bakes Order Form 
 		<span>Please fill all the text fields</span>
 	    </h1>
@@ -85,8 +89,15 @@
 	</form>
         <script type="text/javascript">
            function thankYou() {
+	      document.getElementById("order").submit();
               window.location.href = '/thank_you';
            }
+	   var get_name = document.getElementById("order");
+	   console.log(get_name);
+           // we get the form and save it as a variable
+           // this variable is then saved as a cookie
+           document.cookie = 'order:order';
+	   console.log(document.cookie);
         </script>
 
 	<script type="text/javascript">

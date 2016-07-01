@@ -4,12 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form_style.css') }}">
     <title>Survey</title>
- <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
-	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
-	};
-	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
-    </script>
 
   <style>
   body{
@@ -30,12 +24,19 @@
 	margin-left: 550px;
   }
 
+  .img-logo {
+    float: none;
+    left: 0px;
+    position: absolute;
+  }
+
   </style>
   </head>
 
   <body>
+         <img class="img-logo" src="../static/logo1.png"/>
+	 <form action="" method="post" class="dark-matter" id="survey">
 
-	 <form action="" method="post" class="dark-matter">
 	    <h1>Survey
 		<span>Please give us feedback</span>
 	    </h1>
@@ -58,5 +59,17 @@
 		<input type="button" style="background-color: #87cefa;" class="button" value="Send" /> 
 	    </label>    
 	</form>
+	
+       <script type="text/javascript">
+       function saveForm() {
+          document.getElementById("survey").submit();
+       }
+       var get_name = document.getElementById("survey");
+       // we get the form and save it as a variable
+       // this variable is then saved as a cookie
+       document.cookie = 'survey:survey';
+       console.log(document.cookie);
+      </script>
+
   </body>
 </html>

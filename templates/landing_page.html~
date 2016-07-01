@@ -9,10 +9,15 @@
 	chat_box_color: "#87cefa", // change color of chat box so that it suits our website's theme
 	theme_font_background: "#87cefa", // change color of button 
 	videochat: false, // remove videochat feature (not needed)
-	hidden: true, // hide the default button (not needed now that we have our own custom button),
+	//hidden: true, // hide the default button (not needed now that we have our own custom button),
+	// if hidden, can't use end_of_session_popup_url
 	block_until_agent_joins: false, // remove red banner
 	auto_start: true, // session will start automatically
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey"
+	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/",
+	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	// session continuation
+	cookie_transfer_enabled: true,
+  	cookie_transfer_proxying: false
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
@@ -44,7 +49,7 @@
             width: 30%;
 	    height: 100px;
             font-weight: bold;
-	    margin-top: 100px;
+	    margin-top: 250px;
 	    margin-left: 50px;
 	    border-radius: 12px;
 	}
@@ -54,11 +59,19 @@
          background-color: white;
 	 background-size: cover;
 	}
+        
+        .img-logo {
+         float: none;
+         left: 0px;
+         position: absolute;
+        }
     </style>
 
   </head>
 
   <body>
+
+        <img class="img-logo" src="../static/logo1.png"/>
         <button class="button" id="id_button" onclick="redirect()">Session ID</button>
 	<div>
    	<p class="test">You requested some help. If you are already on the phone with our company, you can pass on the session id you see on this page to the person you are talking to. They will then be able to join you on this session and guide you through the website. Once you have given this id, you can click on it to be redirected to the home page. </p>

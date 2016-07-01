@@ -26,18 +26,19 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-     <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
-	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
-	};
-	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
-    </script>
+    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
+widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
+/*
+add your custom options here
+*/
+};
+var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
 </head>
 
 <body>
 
-    <div class="brand">Fantasy Bakes</div>
+    <div class="brand"><img class="img-logo" src="../static/logo3.png"/> Fantasy Bakes</div>
     <div class="address-bar">123 A Street | Some City, XY 12345 | 890.567.1234</div>
 
     <!-- Navigation -->
@@ -81,6 +82,10 @@
                      <hr>
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
+		     <script>
+		     console.log(document.cookie);
+		     document.write(document.cookie);
+		     </script>
                      <p> Retrieve the payment information and display it here</p>
                 </div>
             </div>
