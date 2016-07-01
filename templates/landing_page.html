@@ -13,14 +13,13 @@
 	// if hidden, can't use end_of_session_popup_url
 	block_until_agent_joins: false, // remove red banner
 	auto_start: true, // session will start automatically
-	//leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	//end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
 	// session continuation
 	cookie_transfer_enabled: true,
   	cookie_transfer_proxying: false,
 	// blacklist
 	blacklist: JSON.stringify([{"pattern": ".*/about.*", "redirect": "https://sheltered-spire-76678.herokuapp.com/#restricted"}]),
-	leader_redirect_url: "/"
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
