@@ -6,11 +6,9 @@
     <title>Cake order</title> 
     <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
 widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-/*
-add your custom options here
-*/
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
+
   <style>
   body{
 	background-image: url("http://static0.thethingsimages.com/wp-content/uploads/2016/02/baking-tips-darkened.jpg");
@@ -48,7 +46,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 		<span>Full name :</span>
 		<input id="name" type="text" name="name" />
 	    </label>
-	    
+
 	    <label>
 		<span>Email address :</span>
 		<input id="email" type="email" name="email"/>
@@ -90,14 +88,16 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
         <script type="text/javascript">
            function thankYou() {
 	      document.getElementById("order").submit();
+	      var get_name = document.getElementById("name").value;
+	      var get_email = document.getElementById("email").value;
+	      var get_address = document.getElementById("address").value;
+	      console.log('order: name='+get_name+'; email='+get_email+'; address='+get_address);
+              document.cookie = 'name='+get_name+';';
+	      document.cookie = 'name='+get_email+';';
+		//+'; address='+get_address;
+	      console.log(document.cookie);
               window.location.href = '/thank_you';
            }
-	   var get_name = document.getElementById("order");
-	   console.log(get_name);
-           // we get the form and save it as a variable
-           // this variable is then saved as a cookie
-           document.cookie = 'order:order';
-	   console.log(document.cookie);
         </script>
 
 	<script type="text/javascript">
