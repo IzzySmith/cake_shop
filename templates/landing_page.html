@@ -3,7 +3,13 @@
   <head>
     <title>Landing Page</title>
 
-    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
+    <script type="text/javascript">
+    var metaName = "\"John\"";
+    var metaEmail = "\"email@example.com\"";
+    var metada = 'return {"name": '+metaName+',"email": '+metaEmail+'}';
+    console.log(typeof metadata);
+    console.log(metadata);
+    (function(){window['_surfly_settings']=window['_surfly_settings']||{
 	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
  	drawing_mode: "permanent", // change drawing mode so that the drawings last
 	chat_box_color: "#87cefa", // change color of chat box so that it suits our website's theme
@@ -20,7 +26,7 @@
   	cookie_transfer_proxying: false,
 	// blacklist
 	blacklist: JSON.stringify([{"pattern": ".*/about.*", "redirect": "https://sheltered-spire-76678.herokuapp.com/#restricted"}]),
-	QUEUE_METADATA_CALLBACK: new Function('return {"name": '+metaName+',"email": '+metaEmail+'}'))
+	QUEUE_METADATA_CALLBACK: new Function(metadata))
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
@@ -88,10 +94,6 @@
 	}		
 	</script>
 
-	<script>
-	var metaName = "John";
-	var metaEmail = "email@example.com";
-	</script>
 
 	<script type="text/javascript">
  	// using the REST API to get information about the session
