@@ -81,23 +81,11 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
 		     	<script>
-			//document.write(document.cookie);
-			console.log(document.cookie);
 			var cookie = document.cookie;
 			document.write(cookie.substring(9,cookie.length));
-			/*
-			var name = "order:";
-			var cookies = document.cookie.split(';');
-			console.log(cookies);
-			for(var i =0; i<cookies.length;i++){
-				if(cookies[i].indexOf(name)){
-					var index = cookies[i].indexOf(name);
-			     		document.write(cookies[i].substring(index+6, cookies[i].length));
-				}
-			}
-			*/
+			document.getElementById("order_name") = cookie.substring(9, cookie.length);
 		     	</script>
-                     <p> Retrieve the payment information and display it here</p>
+                     <p> <div id="order_name"></div> </p>
                 </div>
             </div>
         </div>
