@@ -91,14 +91,13 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
         <script type="text/javascript">
            function thankYou() {
 	      document.getElementById("order").submit();
+	      var get_name = document.getElementById("name").value;
+	      console.log(document.getElementById("name");
+	      console.log(get_name);
+              document.cookie = 'order: name='+get_name+';';
+	      console.log(document.cookie);
               window.location.href = '/thank_you';
            }
-	   var get_name = document.getElementById("name").value;
-	   console.log(get_name);
-           // we get the form and save it as a variable
-           // this variable is then saved as a cookie
-           document.cookie = 'order: name='+get_name+';';
-	   console.log(document.cookie);
         </script>
 
 	<script type="text/javascript">
