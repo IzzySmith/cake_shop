@@ -35,7 +35,7 @@
 
   <body>
          <img class="img-logo" src="../static/logo1.png"/>
-	 <form action="" method="post" class="dark-matter">
+	 <form action="" method="post" id="survey" class="dark-matter">
 
 	    <h1>Survey
 		<span>Please give us feedback</span>
@@ -56,9 +56,16 @@
 	    </label>   
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" style="background-color: #87cefa;" class="button" value="Send" /> 
+		<input type="button" style="background-color: #87cefa;" class="button" onclick="submitSurvey()"value="Send" /> 
 	    </label>    
 	</form>
+	
+	<script>
+	function submitSurvey(){
+		document.getElementById("survey").submit();
+		window.location.href = '/';
+	}
+	</script>
 	
   </body>
 </html>
