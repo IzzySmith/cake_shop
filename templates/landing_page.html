@@ -13,7 +13,7 @@
 	// if hidden, can't use end_of_session_popup_url
 	block_until_agent_joins: false, // remove red banner
 	auto_start: true, // session will start automatically
-	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/",
+	//leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/",
 	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
 	// session continuation
 	cookie_transfer_enabled: true,
@@ -99,7 +99,7 @@
 		    var body = this.responseText; 
 		    // we extract the queue_id from the string we get from the request
 		    var index = body.indexOf("queue_id");
-		    var id = body.substring(index+10, body.length-2);
+		    var id = body.substring(index+10, index+14);
 		    // we display this id on the button
 		    document.getElementById("id_button").innerHTML=id;
 	    }

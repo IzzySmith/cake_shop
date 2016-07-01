@@ -26,3 +26,7 @@ def receipt():
 def thank_you():
    return render_template('thank_you.html')
 
+@app.route('/thanks_survey')
+def thanks_survey():
+   return render_template('thanks_survey.html')
+
