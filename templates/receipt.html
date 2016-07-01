@@ -100,7 +100,6 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			<p> We will send you an email as soon as your cake is ready. </p>
 		     	<script>
 			var cookie = document.cookie;
-			console.log(cookie);
 			cookie = cookie.substring(9, cookie.length);
 			var info = cookie.split(",");
 			document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('=')+1, info[0].length);

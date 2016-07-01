@@ -29,6 +29,9 @@
 
     <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
 widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
+hidden: true,
+cookie_transfer_enabled: true,
+cookie_transfer_proxying: false
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
@@ -99,9 +102,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			var cookie = document.cookie;
 			console.log(cookie);
 			cookie = cookie.substring(9, cookie.length);
-			console.log(cookie);
 			var info = cookie.split(",");
-			console.log(info);
 			document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('=')+1, info[0].length);
 			document.getElementById("order_email").innerHTML = info[1].substring(info[1].indexOf('=')+1, info[1].length);
 			document.getElementById("order_address").innerHTML = info[2].substring(info[2].indexOf('=')+1, info[2].length);
