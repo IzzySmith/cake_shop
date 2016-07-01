@@ -91,8 +91,25 @@ Final step
 
 - We realsied that we don't need all the functionality e.g document sharing, so we will instead integrate zoopim, and just have the co-browsing functionality. Also allows us to have own control option/ exit button. 
 
- - totally invisable 
- - remove UI and put own chat box and buttons **fourteenth commit** 
- - show stealth mode (don't even need a button) remove everything. (not a commit, just demonstration)
- - Create exit button **fifteenth commit**
+ - Remove UI and create exit button **fifteenth commit**
  - Integrate Zoopim **sixteenth commit**
+
+ - at some point find out how to do the control buttons?
+ 
+
+To do:
+
+ *izzy*
+  - save csv file either to local or database (both?) - clarify it 
+  - clarify the login thing :)
+  - clean up the css from the html 
+  - comment and tidy own code 
+  - format the logo (position) and make into home page link 
+
+*mathilde*
+ - the final step 
+ - look into images 
+ - clarifying the commits
+
+to ask: 
+ - some functionalities are working against each other 
