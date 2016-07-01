@@ -88,6 +88,11 @@
 	</script>
 
 	<script type="text/javascript">
+        if (window.location.hash == "restricted")
+            alert("restricted url");
+        </script>    
+
+	<script type="text/javascript">
  	// using the REST API to get information about the session
 	var request = new XMLHttpRequest();
 
