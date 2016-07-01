@@ -4,11 +4,11 @@
     <title>Landing Page</title>
 
     <script type="text/javascript">
+    /*
     var metaName = "\"John\"";
     var metaEmail = "\"email@example.com\"";
     var metadata = 'return {"name": '+metaName+',"email": '+metaEmail+'}';
-    console.log(typeof metadata);
-    console.log(metadata);
+    */
     (function(){window['_surfly_settings']=window['_surfly_settings']||{
 	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
  	drawing_mode: "permanent", // change drawing mode so that the drawings last
@@ -19,14 +19,14 @@
 	// if hidden, can't use end_of_session_popup_url
 	block_until_agent_joins: false, // remove red banner
 	auto_start: true, // session will start automatically
-	//leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/survey",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	//end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
 	// session continuation
 	cookie_transfer_enabled: true,
   	cookie_transfer_proxying: false,
 	// blacklist
 	blacklist: JSON.stringify([{"pattern": ".*/about.*", "redirect": "https://sheltered-spire-76678.herokuapp.com/#restricted"}]),
-	QUEUE_METADATA_CALLBACK: new Function(metadata)
+	//QUEUE_METADATA_CALLBACK: new Function(metadata)
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
