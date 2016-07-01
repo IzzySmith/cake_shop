@@ -84,6 +84,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 		     function getCookieOrder(){
 			var name = "order:";
 			var cookies = document.cookie.split(';');
+			console.log(cookies);
 			for(var i =0; i<cookies.length;i++){
 				if(cookies[i].indexOf(name)){
 					var index = cookies[i].indexOf(name);
