@@ -49,7 +49,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 		<span>Full name :</span>
 		<input id="name" type="text" name="name" />
 	    </label>
-	    
+
 	    <label>
 		<span>Email address :</span>
 		<input id="email" type="email" name="email"/>
@@ -93,11 +93,11 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	      document.getElementById("order").submit();
               window.location.href = '/thank_you';
            }
-	   var get_name = document.getElementById("order");
+	   var get_name = document.getElementById("name").value;
 	   console.log(get_name);
            // we get the form and save it as a variable
            // this variable is then saved as a cookie
-           document.cookie = 'order:order';
+           document.cookie = 'order: name='+get_name+';';
 	   console.log(document.cookie);
         </script>
 
