@@ -92,8 +92,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	      var get_email = document.getElementById("email").value;
 	      var get_address = document.getElementById("address").value;
 	      console.log('order: name='+get_name+'; email='+get_email+'; address='+get_address);
-              document.cookie = 'name='+get_name+';';
-	      document.cookie = 'name='+get_name+';'+'email='+get_email+';';
+	      document.cookie = 'name='+get_name+get_email;
 		//+'; address='+get_address;
 	      console.log(document.cookie);
               window.location.href = '/thank_you';
