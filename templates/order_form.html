@@ -41,7 +41,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 
   <body>
          <img class="img-logo" src="../static/logo1.png"/>
-	 <form action="" method="post" id="order" class="dark-matter">
+	 <form id="order" class="dark-matter">
 	    <h1>Fantasy Bakes Order Form 
 		<span>Please fill all the text fields</span>
 	    </h1>
@@ -85,7 +85,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" class="button" id="order_button" style="cursor:pointer;" onclick=thankYou() style="background-color: #87cefa;" value="submit" /> 
+		<input type="button" class="button" id="order_button" style="cursor:pointer;" onclick=thankYou() style="background-color: #87cefa;" value="Order" /> 
 	    </label>    
 	</form>
         <script type="text/javascript">
@@ -95,6 +95,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	      var get_email = document.getElementById("email").value;
 	      var get_address = document.getElementById("address").value;
 	      document.cookie = 'order: name='+get_name+',email='+get_email+',address='+get_address;
+  	      console.log(document.cookie);
               window.location.href = '/thank_you';
            }
         </script>
