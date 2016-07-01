@@ -33,7 +33,7 @@ widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
 	<style>
-	p {
+	.info {
 		font-size: 20px;
 		color: #87cefa;
 	}
@@ -87,12 +87,13 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
 			<p> Here is an overview of the order you just placed: </p>
-			<p> Your name: </p> <div id="order_name"></div>
+			<p> Your name: </p> <div id="order_name" class="info"></div>
 			<br>
-			<p> Your email: </p> <div id="order_email"></div>
+			<p> Your email: </p> <div id="order_email" class="info"></div>
 			<br>
-			<p> Your address: </p> <div id="order_address"></div>
+			<p> Your address: </p> <div id="order_address" class="info"></div>
 			<br>
+			<p> We will send you an email as soon as your cake is ready. </p>
 		     	<script>
 			var cookie = document.cookie;
 			console.log(cookie);
