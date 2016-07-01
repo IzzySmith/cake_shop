@@ -100,9 +100,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			var cookie = document.cookie;
 			console.log(cookie);
 			cookie = cookie.substring(9, cookie.length);
-			console.log(cookie);
 			var info = cookie.split(",");
-			console.log(info);
 			document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('=')+1, info[0].length);
 			document.getElementById("order_email").innerHTML = info[1].substring(info[1].indexOf('=')+1, info[1].length);
 			document.getElementById("order_address").innerHTML = info[2].substring(info[2].indexOf('=')+1, info[2].length);
