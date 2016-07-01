@@ -88,7 +88,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			console.log(cookie);
 			var info = cookie.split(",");
 			console.log(info);
-			document.getElementById("order_name").innerHTML = info[0].substring(info[i].indexOf('='), info[i].length);
+			document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('='), info[0].length);
 		
 			//document.write(cookie.substring(9,cookie.length));
 		     	</script>
