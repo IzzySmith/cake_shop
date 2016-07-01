@@ -80,12 +80,15 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                      <hr>
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
+			<div id="order_name"></div>
 		     	<script>
-			var cookie = document.cookie;
-			document.write(cookie.substring(9,cookie.length));
-			document.getElementById("order_name") = cookie.substring(9, cookie.length);
+			var cookie = document.cookie.substring(9, cookie.length);
+			var info = cookie.split(",");
+			document.getElementById("order_name").innerHTML = info[0].substring(info[i].indexOf('='), info[i].length);
+		
+			//document.write(cookie.substring(9,cookie.length));
 		     	</script>
-                     <p> <div id="order_name"></div> </p>
+                     
                 </div>
             </div>
         </div>
