@@ -32,6 +32,13 @@ widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
+	<style>
+	.info {
+		font-size: 20px;
+		color: #87cefa;
+		font-weight: bold;
+	}
+	</style>
 </head>
 
 <body>
@@ -80,18 +87,26 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                      <hr>
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
+			<p> Here is an overview of the order you just placed: </p>
+			<p> Your name: </p> <div id="order_name" class="info"></div>
+			<br>
+			<p> Your email: </p> <div id="order_email" class="info"></div>
+			<br>
+			<p> Your address: </p> <div id="order_address" class="info"></div>
+			<br>
+			<p> We will send you an email as soon as your cake is ready. </p>
 		     	<script>
-			var name = "order:";
-			var cookies = document.cookie.split(';');
-			console.log(cookies);
-			for(var i =0; i<cookies.length;i++){
-				if(cookies[i].indexOf(name)){
-					var index = cookies[i].indexOf(name);
-			     		document.write(cookies[i].substring(index+6, cookies[i].length));
-				}
-			}
+			var cookie = document.cookie;
+			console.log(cookie);
+			cookie = cookie.substring(9, cookie.length);
+			console.log(cookie);
+			var info = cookie.split(",");
+			console.log(info);
+			document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('=')+1, info[0].length);
+			document.getElementById("order_email").innerHTML = info[1].substring(info[1].indexOf('=')+1, info[1].length);
+			document.getElementById("order_address").innerHTML = info[2].substring(info[2].indexOf('=')+1, info[2].length);
 		     	</script>
-                     <p> Retrieve the payment information and display it here</p>
+                     
                 </div>
             </div>
         </div>
