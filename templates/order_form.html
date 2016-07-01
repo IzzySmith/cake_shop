@@ -90,9 +90,9 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	      document.getElementById("order").submit();
 	      var get_name = document.getElementById("name").value;
 	      var get_email = document.getElementById("email").value;
-	      console.log(get_email);
 	      var get_address = document.getElementById("address").value;
-              document.cookie = 'order: name='+get_name+'; email='+get_email+'; address='+get_address+';';
+	      console.log('order: name='+get_name+'; email='+get_email+'; address='+get_address);
+              document.cookie = 'order: name='+get_name+'; email='+get_email+'; address='+get_address;
 	      console.log(document.cookie);
               window.location.href = '/thank_you';
            }
