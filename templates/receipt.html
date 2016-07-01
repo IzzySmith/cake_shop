@@ -82,8 +82,12 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                      <hr class="visible-xs">
 			<div id="order_name"></div>
 		     	<script>
-			var cookie = document.cookie.substring(9, cookie.length);
+			var cookie = document.cookie;
+			console.log(cookie);
+			cookie = cookie.substring(9, cookie.length);
+			console.log(cookie);
 			var info = cookie.split(",");
+			console.log(info);
 			document.getElementById("order_name").innerHTML = info[0].substring(info[i].indexOf('='), info[i].length);
 		
 			//document.write(cookie.substring(9,cookie.length));
