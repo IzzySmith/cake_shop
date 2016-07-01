@@ -81,8 +81,10 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
                         <img class="img-responsive img-border img-left" src="../static/lemon.jpg" alt="">
                      <hr class="visible-xs">
 		     	<script>
-			document.write(document.cookie);
+			//document.write(document.cookie);
 			console.log(document.cookie);
+			var cookie = document.cookie;
+			document.write(cookie.substring(9,));
 			/*
 			var name = "order:";
 			var cookies = document.cookie.split(';');
