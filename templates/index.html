@@ -238,9 +238,9 @@
 			var index = body.indexOf("response");
 			var success = body.substring(index+11, body.length-2);
 			console.log(success);
-			if(success==="Session has been ended successfully"){				
+			if(success==="Session has been ended successfully"){	
+				window.location.href = '/survey';			
 				Surfly.endSession('https://sheltered-spire-76678.herokuapp.com');
-				window.location.href = '/survey';
 			}
  		}
 	};

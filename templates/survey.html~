@@ -4,17 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='form_style.css') }}">
     <title>Survey</title>
-    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
-widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
-/*
-add your custom options here
-*/
-};
-var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
   <style>
   body{
-	background-image: url("http://sweetside.ca/wp-content/uploads/2013/03/Cupcake-Assortment.jpg");
+	background-image: url("https://images7.alphacoders.com/688/688381.jpg");
         background-color: white;
 	background-size: cover;
   }
@@ -42,7 +35,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 
   <body>
          <img class="img-logo" src="../static/logo1.png"/>
-	 <form action="" method="post" class="dark-matter">
+	 <form action="" method="post" id="survey" class="dark-matter">
 
 	    <h1>Survey
 		<span>Please give us feedback</span>
@@ -63,9 +56,16 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	    </label>   
 	     <label>
 		<span>&nbsp;</span> 
-		<input type="button" style="background-color: #87cefa;" class="button" value="Send" /> 
+		<input type="button" style="background-color: #87cefa;" class="button" onclick="submitSurvey()"value="Send" /> 
 	    </label>    
 	</form>
+	
+	<script>
+	function submitSurvey(){
+		document.getElementById("survey").submit();
+		window.location.href = '/thanks_survey';
+	}
+	</script>
 	
   </body>
 </html>

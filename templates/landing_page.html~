@@ -3,7 +3,13 @@
   <head>
     <title>Landing Page</title>
 
-    <script type="text/javascript">(function(){window['_surfly_settings']=window['_surfly_settings']||{
+    <script type="text/javascript">
+    /*
+    var metaName = "\"John\"";
+    var metaEmail = "\"email@example.com\"";
+    var metadata = 'return {"name": '+metaName+',"email": '+metaEmail+'}';
+    */
+    (function(){window['_surfly_settings']=window['_surfly_settings']||{
 	widgetkey:"dd402bb4940b4cf3a855aaa371d11419",
  	drawing_mode: "permanent", // change drawing mode so that the drawings last
 	chat_box_color: "#87cefa", // change color of chat box so that it suits our website's theme
@@ -12,12 +18,16 @@
 	//hidden: true, // hide the default button (not needed now that we have our own custom button),
 	// if hidden, can't use end_of_session_popup_url
 	block_until_agent_joins: false, // remove red banner
-	//auto_start: true, // session will start automatically
-	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/",
-	end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	auto_start: true, // session will start automatically
+	leader_redirect_url: "https://sheltered-spire-76678.herokuapp.com/survey",
+	//end_of_session_popup_url: "https://sheltered-spire-76678.herokuapp.com/survey",
 	// session continuation
 	cookie_transfer_enabled: true,
-  	cookie_transfer_proxying: false
+  	cookie_transfer_proxying: false,
+	// blacklist
+	blacklist: JSON.stringify([{"pattern": ".*/about.*", "redirect": "https://sheltered-spire-76678.herokuapp.com/#restricted"}]),
+	//QUEUE_METADATA_CALLBACK: new Function(metadata)
+	ui_off: true
 	};
 	var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();
     </script>
@@ -30,7 +40,7 @@
 	    color: #87cefa;
 	    font-weight: bold;
 	    text-align: justify;
-	    margin-top: 80px;
+	    margin-top: 65px;
 	    margin-left: 50px;
 	    font-family: 'Helvetica Neue', sans-serif;
 	}
@@ -84,6 +94,25 @@
 		window.location.href = '/';
 	}		
 	</script>
+	
+   	<script>
+	// get session ID
+  	var request = new XMLHttpRequest();
+  	request.open('GET', 'https://api.surfly.com/v2/sessions/?	api_key=33c092b9d4d6425e817f5140447e43da&active_session=true');
+  	request.onreadystatechange = function () {
+    	if (this.readyState === 4) {
+      		if(window.__surfly){
+        		var body = this.responseText;
+			console.log(body);
+        		var index = body.indexOf("session_id");
+        		var index_end = body.indexOf("agent_id");
+        		var id = body.substring(index+13, index_end-3);
+			sessionStorage.setItem("session_id", id);
+     	 	}
+    	}
+  	};
+  	request.send();	
+   	</script>
 
 	<script type="text/javascript">
  	// using the REST API to get information about the session
@@ -97,7 +126,8 @@
 		    var body = this.responseText; 
 		    // we extract the queue_id from the string we get from the request
 		    var index = body.indexOf("queue_id");
-		    var id = body.substring(index+10, body.length-2);
+		    console.log(body);
+		    var id = body.substring(index+10, index+14);
 		    // we display this id on the button
 		    document.getElementById("id_button").innerHTML=id;
 	    }

@@ -35,9 +35,33 @@ cookie_transfer_proxying: false
 };
 var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://surfly.com/static/js/widget.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n); })();</script>
 
+    <style>
+      #exit_button {
+	background-color: #87cefa;
+	border: none;
+	color: black;
+	padding: 3px 7px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 18px;
+	margin: 0 auto;
+	cursor: pointer;
+        width: 8%;
+	height: 30px;
+	margin-top: 5px;
+	margin-right: 5px;
+        font-weight: bold;
+	border-radius: 8px;
+    }
+    </style>
+
 </head>
    
 <body>
+     <div style="text-align:right;">
+      <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
+    </div>
     <header id="top" class="header">
         <img class="img-logo" src="../static/logo2.png"/>
         <div class="text-vertical-center">
@@ -48,6 +72,34 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
         </div>
     </header>
 
+   <script>
+   if(window.__surfly){
+	document.getElementById('exit_button').style.visibility="visible";
+   } else {
+	document.getElementById('exit_button').style.visibility="hidden";
+   }
+   </script>
+
+   <script type="text/javascript">
+    // end session
+    function exitSession(){
+	var request_end = new XMLHttpRequest();
+	request_end.open('DELETE', 'https://api.surfly.com/v2/sessions/'+sessionStorage.getItem("session_id")+'/?api_key=33c092b9d4d6425e817f5140447e43da');
+	request_end.onreadystatechange = function () {
+  		if (this.readyState === 4) {
+			var body = this.responseText;
+			var index = body.indexOf("response");
+			var success = body.substring(index+11, body.length-2);
+			console.log(success);
+			if(success==="Session has been ended successfully"){	
+				window.location.href = '/survey';			
+				Surfly.endSession('https://sheltered-spire-76678.herokuapp.com');
+			}
+ 		}
+	};
+	request_end.send();
+  }
+  </script>
 </body>
 
 </html>
