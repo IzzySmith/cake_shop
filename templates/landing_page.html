@@ -113,6 +113,7 @@
     	if (this.readyState === 4) {
       		if(window.__surfly){
         		var body = this.responseText;
+			console.log(body);
         		var index = body.indexOf("session_id");
         		var index_end = body.indexOf("agent_id");
         		var id = body.substring(index+13, index_end-3);
