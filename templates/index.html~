@@ -70,6 +70,17 @@
 	border-radius: 8px;
     }
     </style>
+
+    <!-- Adding Zopim Live Chat -->
+    <script type="text/javascript">
+	    window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+	    d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+	    _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+	    $.src="//v2.zopim.com/?40l495kTPWFGA7JFrUDzK03KARqCPsNL";z.t=+new Date;$.
+	    type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+    </script>
+    <!--End of Zopim Live Chat Script-->
+
 </head>
 
 <body>
@@ -248,10 +259,27 @@
   }
   </script>
 
+	<script>
+	  $zopim(function() {
+	    // update visitor's path with current page's location and title
+	    $zopim.livechat.sendVisitorPath({
+		url: 'https://sheltered-spire-76678.herokuapp.com/',
+		title: 'index'
+	    });
+	    if($zopim.livechat.isChatting()){
+	    	console.log("I'm here");
+		 $zopim.livechat.window.hide();
+	    }
+	  });
+	</script>
 
     <script>
     function landing(){
-	window.location.href = '/landing_page';
+	if(!window.__surfly){
+		window.location.href = '/landing_page';
+	} else {
+		alert("You're already in a session with one of our agents!");
+	}
     }
     </script>
     
