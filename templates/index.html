@@ -63,8 +63,10 @@
 	font-size: 18px;
 	margin: 0 auto;
 	cursor: pointer;
-        width: 10%;
-	height: 60px;
+        width: 8%;
+	height: 30px;
+	margin-top: 5px;
+	margin-right: 5px;
         font-weight: bold;
 	border-radius: 8px;
     }
@@ -259,6 +261,7 @@
 			console.log(success);
 			if(success==="Session has been ended successfully"){				
 				Surfly.endSession('https://sheltered-spire-76678.herokuapp.com');
+				window.location.href = '/survey';
 			}
  		}
 	};
