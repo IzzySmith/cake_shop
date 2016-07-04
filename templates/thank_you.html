@@ -62,14 +62,14 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
     <header id="top" class="header">
         <img class="img-logo" src="../static/logo2.png"/>
 
-    <div style="text-align:right;">
-      	  <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
-    </div>
     <div class="text-vertical-center">
             <h1>Thank you</h1>
             <h3>for your order</h3>
             <br>
             <a href="{{ url_for('receipt') }}" class="btn btn-dark btn-lg">Get Receipt</a>
+    </div>
+    <div style="text-align:right;">
+       	  <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
     </div>
     </header>
 
