@@ -170,6 +170,12 @@ hr.small {
     position: absolute;
 }
 
+.exit-button {
+    float: none;
+    right: 0px;
+    position: absolute;
+}
+
 /* Portfolio */
 
 .portfolio {
