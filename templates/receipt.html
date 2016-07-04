@@ -134,7 +134,8 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			var cookie = document.cookie;
 			var index_order = cookie.indexOf("order");
 			console.log(cookie);
-			cookie = cookie.substring(index_order, cookie.indexOf(";"));
+			console.log(index_order);
+			cookie = cookie.substring(index_order, cookie.length);
 			console.log(cookie);
 			var info = cookie.split(",");
 			console.log(info);

@@ -133,6 +133,7 @@
 	  if (this.readyState === 4) {
 	    if(window.__surfly){
 		    var body = this.responseText; 
+		    console.log(body);
 		    // we extract the queue_id from the string we get from the request
 		    var index = body.indexOf("queue_id");
 		    var id = body.substring(index+10, index+14);
