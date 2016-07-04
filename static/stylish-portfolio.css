@@ -172,8 +172,8 @@ hr.small {
 
 .exit-button {
     float: none;
-    right: 100px;
-    position: fixed;
+    left: 0px;
+    position: absolute;
 }
 
 /* Portfolio */
