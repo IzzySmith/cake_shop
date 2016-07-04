@@ -201,8 +201,8 @@
                      <p style="text-align:center;"> Want us to help you design the cake of your dreams? Come chat with us :)</p>
 		     <div style="text-align:center;">
                      	<button class="button" id="get_help_button" onclick="landing()"></button>
-			<button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
 		     </div>
+		     <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
                 </div>
             </div>
         </div>
@@ -257,11 +257,7 @@
 
     <script>
     function landing(){
-	window.onload=function(){
-		var a = document.getElementById("get_help_button");
-		a.href = a.href + "?prevurl=" + 
 	window.location.href = '/landing_page';
-		console.log(a.href);
     }
     </script>
     
