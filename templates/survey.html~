@@ -20,8 +20,8 @@
   }
 
   form{
-	margin-top: 30px;
-	margin-left: 550px;
+	margin-top: 80px;
+	margin-left: 900px;
   }
 
   .img-logo {

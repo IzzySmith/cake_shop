@@ -49,8 +49,6 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	cursor: pointer;
         width: 8%;
 	height: 30px;
-	margin-top: 5px;
-	margin-right: 5px;
         font-weight: bold;
 	border-radius: 8px;
     }
@@ -59,11 +57,9 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 </head>
    
 <body>
-     <div style="text-align:right;">
-      <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
-    </div>
     <header id="top" class="header">
         <img class="img-logo" src="../static/logo2.png"/>
+        <button class="exit-button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> 
         <div class="text-vertical-center">
             <h1>Thank you</h1>
             <h3>for your order</h3>
