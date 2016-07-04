@@ -54,19 +54,36 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
         font-weight: bold;
 	border-radius: 8px;
     }
-
+/*
     body {
    	 background-image: url("../static/stawberries.jpg");
          background-color: white;
 	 background-size: cover;
     }
+
+    .text-vertical-center {
+	    display: table-cell;
+	    text-align: center;
+	    vertical-align: middle;
+	    color: #79b9e1;
+    }
+
+    .text-vertical-center h1 {
+	    margin: 0;
+	    padding: 0;
+	    font-size: 4.5em;
+	    font-weight: 700;
+	    color: #87cefa;
+    }
+*/
     </style>
 
 </head>
    
 <body>
+    <header>
     <div style="text-align:right;">
-       	  <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
+       	  <button class="exit-button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
     </div>
     
     <div class="img-logo">
@@ -79,6 +96,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
             <br>
             <a href="{{ url_for('receipt') }}" class="btn btn-dark btn-lg">Get Receipt</a>
     </div>
+   </header>
 
    <script>
    if(window.__surfly){
