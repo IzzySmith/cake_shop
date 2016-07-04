@@ -171,8 +171,8 @@ hr.small {
 }
 
 .exit-button {
-    float: right;
-    right: 0px;
+    float: none;
+    right: 100px;
     position: absolute;
 }
 
