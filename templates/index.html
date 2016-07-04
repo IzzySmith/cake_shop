@@ -259,20 +259,16 @@
   }
   </script>
 
-    <script>
-    if(!$zopim.livechat.isChatting()){
-	console.log("already chatting");
-    }
-    </script>
-
 	<script>
-	 
 	  $zopim(function() {
 	    // update visitor's path with current page's location and title
-	    $zopim.livechat.sendVisitorPath();
+	    $zopim.livechat.sendVisitorPath({
+		url: 'https://sheltered-spire-76678.herokuapp.com/',
+		title: 'index'
+	    });
 	  });
-	 
 	</script>
+
     <script>
     function landing(){
 	if(!window.__surfly){
