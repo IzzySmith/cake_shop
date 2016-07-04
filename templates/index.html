@@ -42,6 +42,25 @@
     	height: 108px;  
     	width: 192px
     }
+
+    #exit_button {
+	background-color: #87cefa;
+	border: none;
+	color: black;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 30px;
+	    margin: 0 auto;
+	    cursor: pointer;
+            width: 30%;
+	    height: 100px;
+            font-weight: bold;
+	    margin-top: 80px;
+	    margin-left: 50px;
+	    border-radius: 8px;
+    }
     </style>
 </head>
 
@@ -182,6 +201,7 @@
                      <p style="text-align:center;"> Want us to help you design the cake of your dreams? Come chat with us :)</p>
 		     <div style="text-align:center;">
                      	<button class="button" id="get_help_button" onclick="landing()"></button>
+			<button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
 		     </div>
                 </div>
             </div>
@@ -190,8 +210,58 @@
     </div>
 
     <script>
+   if(window.__surfly){
+	document.getElementById('exit_button').style.visibility="visible";
+   } else {
+	document.getElementById('exit_button').style.visibility="hidden";
+   }
+   </script>
+
+   <script>
+	// get session ID
+  	var request = new XMLHttpRequest();
+  	request.open('GET', 'https://api.surfly.com/v2/sessions/?	api_key=33c092b9d4d6425e817f5140447e43da&active_session=true');
+  	request.onreadystatechange = function () {
+    	if (this.readyState === 4) {
+      		if(window.__surfly){
+        		var body = this.responseText;
+        		var index = body.indexOf("session_id");
+        		var index_end = body.indexOf("agent_id");
+        		var id = body.substring(index+13, index_end-3);
+			document.getElementById("session_id").innerHTML=id;
+     	 	}
+    	}
+  	};
+  	request.send();	
+   </script>
+
+   <script type="text/javascript">
+    // end session
+    function exitSession(){
+	var request_end = new XMLHttpRequest();
+	request_end.open('DELETE', 'https://api.surfly.com/v2/sessions/'+document.getElementById("session_id").innerHTML+'/?api_key=33c092b9d4d6425e817f5140447e43da');
+	request_end.onreadystatechange = function () {
+  		if (this.readyState === 4) {
+			var body = this.responseText;
+			var index = body.indexOf("response");
+			var success = body.substring(index+11, body.length-2);
+			if(success==="Session has been ended successfully"){				
+				Surfly.endSession('https://serene-sea-89776.herokuapp.com');
+			}
+ 		}
+	};
+	request_end.send();
+  }
+  </script>
+
+
+    <script>
     function landing(){
+	window.onload=function(){
+		var a = document.getElementById("get_help_button");
+		a.href = a.href + "?prevurl=" + 
 	window.location.href = '/landing_page';
+		console.log(a.href);
     }
     </script>
     
@@ -225,6 +295,7 @@
     })
     </script>
 
+    <div id="session_id" style="display:none"></div>
 </body>
 
 </html>
