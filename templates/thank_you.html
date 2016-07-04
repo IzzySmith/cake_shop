@@ -81,22 +81,15 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 </head>
    
 <body>
-    <header>
-    <div style="text-align:right;">
-       	  <button class="exit-button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
-    </div>
-    
-    <div class="img-logo">
-      <img src="../static/logo2.png"/>
-    </div>
-
-    <div class="text-vertical-center">
+    <header id="top" class="header">
+        <img class="img-logo" src="../static/logo2.png"/>
+        <div class="text-vertical-center">
             <h1>Thank you</h1>
             <h3>for your order</h3>
             <br>
             <a href="{{ url_for('receipt') }}" class="btn btn-dark btn-lg">Get Receipt</a>
-    </div>
-   </header>
+        </div>
+    </header>
 
    <script>
    if(window.__surfly){
