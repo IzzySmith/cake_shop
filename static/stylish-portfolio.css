@@ -172,7 +172,7 @@ hr.small {
 
 .exit-button {
     float: none;
-    right: 0px;
+    left: 200px;
     position: absolute;
 }
 
