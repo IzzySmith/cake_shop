@@ -262,7 +262,11 @@
 
     <script>
     function landing(){
-	window.location.href = '/landing_page';
+	if(!window.__surfly){
+		window.location.href = '/landing_page';
+	} else {
+		alert("You're already in a session with one of our agents!");
+	}
     }
     </script>
     
