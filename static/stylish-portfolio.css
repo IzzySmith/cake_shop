@@ -170,6 +170,26 @@ hr.small {
     position: absolute;
 }
 
+.exit-button {
+    float: right;
+    background-color: #87cefa;
+    border: none;
+    color: black;
+    padding: 3px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 auto;
+	cursor: pointer;
+        width: 8%;
+	height: 30px;
+	margin-top: 5px;
+	margin-right: 20px;
+        font-weight: bold;
+	border-radius: 8px;
+}
+
 /* Portfolio */
 
 .portfolio {
