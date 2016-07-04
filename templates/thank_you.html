@@ -65,8 +65,11 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 </head>
    
 <body>
-    <header id="top" class="header">
-        <img class="img-logo" src="../static/logo2.png"/>
+    <div style="text-align:right;">
+       	  <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
+    </div>
+
+    <img class="img-logo" src="../static/logo2.png"/>
 
     <div class="text-vertical-center">
             <h1>Thank you</h1>
@@ -74,10 +77,6 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
             <br>
             <a href="{{ url_for('receipt') }}" class="btn btn-dark btn-lg">Get Receipt</a>
     </div>
-    <div style="text-align:right;">
-       	  <button class="button" id="exit_button" style="visibility:hidden" onclick="exitSession()">Exit session</button> </a>
-    </div>
-    </header>
 
    <script>
    if(window.__surfly){
