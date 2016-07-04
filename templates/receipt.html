@@ -142,7 +142,7 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 			var info = cookie.split(",");
 			console.log(info);
 			console.log(sessionStorage.getItem("order_info_complete"));
-			if(sessionStorage.getItem("order_info_complete")==true){
+			if(sessionStorage.getItem("order_info_complete")==="true"){
 				console.log("ok");
 				document.getElementById("order_name").innerHTML = info[0].substring(info[0].indexOf('=')+1, info[0].length);
 				document.getElementById("order_email").innerHTML = info[1].substring(info[1].indexOf('=')+1, info[1].length);

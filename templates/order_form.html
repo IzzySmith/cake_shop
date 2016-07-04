@@ -128,9 +128,9 @@ var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src
 	      var get_email = document.getElementById("email").value;
 	      var get_address = document.getElementById("address").value;	
 	      if(get_name!=="" && get_email!=="" && get_address!==""){
-			sessionStorage.setItem("order_info_complete", true);
+			sessionStorage.setItem("order_info_complete", "true");
 	      } else {
-			sessionStorage.setItem("order_info_complete", false);
+			sessionStorage.setItem("order_info_complete", "false");
 	      }
 	      document.cookie = 'order: name='+get_name+', email='+get_email+', address='+get_address;
               window.location.href = '/thank_you';
