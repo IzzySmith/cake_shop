@@ -47,7 +47,7 @@
 	background-color: #87cefa;
 	border: none;
 	color: black;
-	padding: 15px 32px;
+	padding: 3px 7px;
 	    text-align: center;
 	    text-decoration: none;
 	    display: inline-block;
@@ -55,10 +55,10 @@
 	    margin: 0 auto;
 	    cursor: pointer;
             width: 30%;
-	    height: 100px;
+	    height: 60px;
             font-weight: bold;
 	    margin-top: 5px;
-	    margin-left: 1000px;
+	    margin-left: 1200px;
 	    border-radius: 8px;
     }
     </style>
@@ -218,6 +218,26 @@
    }
    </script>
 
+
+   	<script>
+	// get session ID
+  	var request = new XMLHttpRequest();
+  	request.open('GET', 'https://api.surfly.com/v2/sessions/?	api_key=33c092b9d4d6425e817f5140447e43da&active_session=true');
+  	request.onreadystatechange = function () {
+    	if (this.readyState === 4) {
+      		if(window.__surfly){
+        		var body = this.responseText;
+			console.log(body);
+        		var index = body.indexOf("session_id");
+        		var index_end = body.indexOf("agent_id");
+        		var id = body.substring(index+13, index_end-3);
+			sessionStorage.setItem("session_id", id);
+     	 	}
+    	}
+  	};
+  	request.send();	
+   	</script>
+
    <script type="text/javascript">
     // end session
     function exitSession(){
@@ -228,6 +248,7 @@
 			var body = this.responseText;
 			var index = body.indexOf("response");
 			var success = body.substring(index+11, body.length-2);
+			console.log(success);
 			if(success==="Session has been ended successfully"){				
 				Surfly.endSession('https://sheltered-spire-76678.herokuapp.com');
 			}
